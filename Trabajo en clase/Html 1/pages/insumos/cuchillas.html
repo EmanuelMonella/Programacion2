@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .clsCampoText {
+            background-color: #cf0808;
+            border: 1px solid #c5c5c5;
+            padding: 5px;
+            width: 200px;
+        }
+    </style>
+    <script lang="javascript">
+
+        function HolaMundo() {
+        var txtInputTexto = document.getElementById("txtnombre");
+        var slsInputAcepta = document.getElementById("seleccion");
+        alert(txtInputTexto.value + " " + slsInputAcepta.value);
+        }
+    </script>
 </head>
 <body>
     <h1>Insumos</h1>
@@ -43,7 +59,7 @@
     </table>
 
     <hr>
-
+    
     <table border="1" cellpadding="0" cellspacing="0">
         <tr>
             <td>1</td>
@@ -71,5 +87,52 @@
             <td>15</td>
         </tr>
     </table>
+    <div>Titulo con div</div>
+    <table border="1">
+        <caption>Titulo de la tabla</caption>
+        <thead>
+            <tr>
+                <th>Este es un titulo</th>
+                <th>Este es un titulo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Contenido 1</td>
+                <td>Contenido 2</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <form action="cuchillas2.html" method="post" target="_self">
+                        <input type="button" name="btovalidar" id="btovalidar" value="Pulsar" onclick="javascript:alert('Que tocas')">
+                    </form>
+                    <form action="cuchillas2.html" method="post" target="_self">
+                        <input type="email" name="email" id="email" value="Ingrese su email">
+                        <input type="submit" name="btovalidar" id="btovalidar" value="Enviar">
+                        <label for="email" class="clsCampoText">Su email</label>
+                        <input type="reset" name="btovalidar" id="btovalidar" value="Limpiar">
+                        <input type="text" name="nombre" id="txtnombre" value="No la voles">
+                        
+                        <label >Aprobo?</label>
+                        <select name="seleccion" id="seleccion">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                        <input type="button" onclick="javascript:HolaMundo()">
+                    </form>
+                    
+                </td>
+
+            </tr>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Este es un pie de tabla</td>
+            </tr>
+         </tfoot>
+    </table>
+    <hr>
+
 </body>
 </html>
