@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+</head>
+<body>
+    <h1>Pefil del estudiante</h1>
+    <legend><b>Datos personales</b></legend>
+    <br>
+    <form action="#" method="get">
+        <label for="rol">Rol de la persona</label>
+        <input type="text" name="rol" id="rol" value="ESTUDIANTE" readonly>
+        <br><br>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" name="nombre" id="nombre" required>
+        <br><br>
+        <label for="email">EMAIL</label>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+        <label for="edad">Edad</label>
+        <input type="number" name="edad" id="edad" required>
+        <br><br>
+        <label for="nacionalidad">Nacionalidad</label>
+        <select name="nacionalidad" id="nacionalidad" required>
+            <option value="">Seleccione...</option>
+            <option>Argentina</option>
+            <option>Paraguay</option>
+            <option>Uruguay</option>
+            <option>Chile</option>
+            <option>Brasil</option>
+            <option>Indefinido</option>
+        </select>
+        <br><br>
+        <label for="ocupacion">Ocupación</label>
+        <select name="ocupacion" id="ocupacion" required>
+            <option value="">Seleccione...</option>
+            <option>Desempleado</option>
+            <option>En busqueda laboral</option>
+            <option>Trabajo part-time</option>
+            <option>Trabajo full-time</option>
+        </select>
+        <br><br>
+        <legend><b>Gustos personales</b></legend>
+        <br>
+        <label for="musica">Musica favorita</label>
+        <input type="text" name="musica" id="musica" required>
+        <br><br>    
+        <label for="comida">Comida favorita</label>
+        <select name="comida" id="comida">
+            <option value="">Seleccione...</option>
+            <option>Pizza</option>
+            <option>Pastas</option>
+            <option>Asado</option>
+            <option>Ensaladas</option>
+            <option>Ninguna</option>
+        </select>
+        <input type="checkbox" name="recordar" id="recordar"> Recordar mis datos
+        <br><br>
+        <input type="submit" value="Guardar datos">
+    </form>
+</body>
+</html>
