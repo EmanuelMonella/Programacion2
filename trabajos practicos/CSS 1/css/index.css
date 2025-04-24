@@ -13,6 +13,8 @@ h2 {
 }
 p {
     font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }   
 ul {
     font-family: monospace;
@@ -20,4 +22,8 @@ ul {
 }
 a [href] {
     font-weight: bold;
+}
+ul a {
+    color: #ff4800;
+    text-decoration: underline;
 }
