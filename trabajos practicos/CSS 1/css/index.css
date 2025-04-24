@@ -19,6 +19,10 @@ p {
 ul {
     font-family: monospace;
     font-size: 18px;
+    margin-left: 100px;
+    padding: 20px;
+    border: 2px solid blue;
+    width: 40%;
 }
 a [href] {
     font-weight: bold;
