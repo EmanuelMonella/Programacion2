@@ -31,7 +31,7 @@ nav {
 }
 
 .nav-links {
-    display: flex;
+    display: flex   ;
     list-style: none;
 }
 
@@ -40,4 +40,17 @@ nav {
     padding: 10px 15px;
     text-decoration: none;
     color: #fff
+}
+
+.nav-item:hover {
+    background-color: aquamarine;
+}
+
+.nav-item:hover a {
+    color: red;
+}
+
+.nav-item-login {
+    border-radius: 20%;
+    background-color: black;
 }
