@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src="js/script.js" defer ></script>
+</head>
+<body>
+    <div id="contenedor">
+        <form action="#">
+            <input type="text" id="nombre" placeholder="Ingrese su nombre.."><br>
+            <input type="number" id="edad" placeholder="Ingese su edad.."><br>
+            <input type="email" id="email" placeholder="Ingrese su email.." ><br>
+            <input type="button" onclick="mostrar()" value="Enviar"><br>
+        </form>
+    </div>
+    <div id="contenido">
+        <label>Nombre: </label>
+        <p id="name">vacio</p>
+        <label>Edad: </label>
+        <p id="age">vacio</p>
+        <label>Email: </label>
+        <p id="mail">vacio</p>
+        <input type="button" onclick="editar()" value="Editar">
+    </div>
+</body>
+</html>
