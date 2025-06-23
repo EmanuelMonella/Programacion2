@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios LocalStorage y SessionStorage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Ejercicios de LocalStorage y SessionStorage</h1>
+
+  <section id="ej1">
+    <h2>Ejercicio 1: Nombre de usuario</h2>
+    <input type="text" id="nombre">
+    <button onclick="guardarNombre()">Guardar</button>
+    <p id="saludo"></p>
+  </section>
+
+  <section id="ej2">
+    <h2>Ejercicio 2: Contador de visitas</h2>
+    <p id="contador"></p>
+  </section>
+
+  <section id="ej3">
+    <h2>Ejercicio 3: Preferencia de color</h2>
+    <input type="color" id="colorPicker">
+    <button onclick="guardarColor()">Guardar color</button>
+  </section>
+
+  <section id="ej4">
+    <h2>Ejercicio 4: Lista de tareas</h2>
+    <input id="tarea">
+    <button onclick="agregarTarea()">Agregar</button>
+    <ul id="lista"></ul>
+  </section>
+
+  <section id="ej5">
+    <h2>Ejercicio 5: Temporizador (SessionStorage)</h2>
+    <p id="tiempo">0</p>
+  </section>
+
+  <section id="ej6">
+    <h2>Ejercicio 6: Guardar notas</h2>
+    <textarea id="nota"></textarea>
+    <button onclick="guardarNota()">Guardar</button>
+    <p id="mostrarNota"></p>
+  </section>
+
+  <section id="ej7">
+    <h2>Ejercicio 7: Interruptor</h2>
+    <label><input type="checkbox" id="interruptor"> Activado</label>
+  </section>
+
+  <section id="ej8">
+    <h2>Ejercicio 8: Mensaje de bienvenida</h2>
+    <input id="mensaje">
+    <button onclick="guardarMensaje()">Guardar</button>
+    <p id="bienvenida"></p>
+  </section>
+
+  <section id="ej9">
+    <h2>Ejercicio 9: Lista de compras</h2>
+    <input id="compra">
+    <button onclick="agregarCompra()">Agregar</button>
+    <ul id="listaCompras"></ul>
+  </section>
+
+  <section id="ej10">
+    <h2>Ejercicio 10: Última visita</h2>
+    <p id="ultimaVisita"></p>
+  </section>
+
+  <section id="ej11">
+    <h2>Ejercicio 11: Progreso de lectura</h2>
+    <input type="range" id="progreso" min="0" max="100">
+    <p id="mostrarProgreso"></p>
+  </section>
+
+  <section id="ej12">
+    <h2>Ejercicio 12: Formulario persistente</h2>
+    <input id="nombreForm" placeholder="Nombre">
+    <input id="emailForm" placeholder="Email">
+    <button onclick="guardarFormulario()">Guardar</button>
+  </section>
+
+  <section id="ej13">
+    <h2>Ejercicio 13: Estado del juego</h2>
+    <p>Puntaje: <span id="puntaje">0</span></p>
+    <button onclick="sumarPuntaje()">+1</button>
+  </section>
+
+  <section id="ej14">
+    <h2>Ejercicio 14: Historial de navegación</h2>
+    <ul id="historial"></ul>
+  </section>
+
+  <section id="ej15">
+    <h2>Ejercicio 15: Tema claro/oscuro</h2>
+    <button onclick="cambiarTema()">Cambiar tema</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
