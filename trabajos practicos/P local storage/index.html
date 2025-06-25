@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Storage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body onload="visitas()">
     <div>
@@ -17,6 +19,72 @@
         <h2>Segundo punto</h2>
         <p id="visitas"></p>
     </div>
-    <script src="js/script.js"></script>
+    <div>
+        <h2>Tercer punto</h2>
+        <input type="color" id="color_fondo">
+        <button onclick="guardarColor()">Guardar color</button>
+    </div>
+    <div>
+        <h2>Cuarto punto</h2>
+        <input type="text" id="tareaInput" placeholder="Escribí una tarea">
+        <button onclick="agregarTarea()">Agregar</button>
+        <ul id="listaTareas"></ul>
+    </div>
+    <div>
+        <h2>Quinto punto</h2>
+        <p id="tiempo">0</p>
+    </div>
+    <div>
+        <h2>Sexto punto</h2>
+        <textarea name="nota" id="nota"></textarea>
+        <input type="button" onclick="guardarNota()" value="Guardar nota">
+        <p id="mostrarNota"></p>
+    </div>
+    <div>
+        <h2>Septimo punto</h2>
+        <label><input type="checkbox" id="interruptor"> Activado</label>
+    </div>
+    <div>
+        <h2>Ocatvo punto</h2>
+        <input id="mensaje">
+        <button onclick="guardarMensaje()">Guardar</button>
+        <p id="bienvenida"></p>
+    </div>
+    <div>
+        <h2>Noveno ejercicio</h2>
+        <input id="compra">
+        <button onclick="agregarCompra()">Agregar</button>
+        <ul id="listaCompras"></ul>
+    </div>
+    <div>
+        <h2>Decimo ejercicio</h2>
+        <p id="ultimaVisita"></p>
+    </div>
+    <div>
+        <h2>Punto 11</h2>
+        <input type="range" id="progreso" min="0" max="100">
+        <p id="mostrarProgreso"></p>
+    </div>
+    <div>
+        <h2>Punto 12</h2>
+        <input id="nombreForm" placeholder="Nombre">
+        <input id="emailForm" placeholder="Email">
+        <button onclick="guardarFormulario()">Guardar</button>
+    </div>
+    <div>
+        <h2>Punto 13</h2>
+        <p>Puntaje: <span id="puntaje">0</span></p>
+        <button onclick="sumarPuntaje()">+1</button>
+    </div>
+    <div>
+        <h2>Punto 14</h2>
+        <ul id="historial"></ul>
+    </div>
+    <div>
+        <h2>Punto 15</h2>
+        <button onclick="cambiarTema()">Cambiar tema</button>
+    </div>
 </body>
+
 </html>
+
