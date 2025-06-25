@@ -1,7 +1,7 @@
 let contenedorFormulario = document.getElementById("contenedor")
 let contenedorTexto = document.getElementById("contenido")
 contenedorTexto.style.display = "none"
-function mostrar(){
+function mostrar() {
     contenedorFormulario.style.display = "none"
     contenedorTexto.style.display = "block"
     let textoNombre = document.getElementById("nombre")
@@ -15,7 +15,7 @@ function mostrar(){
     mail.innerHTML = Email.value
 }
 
-function editar(){
+function editar() {
     contenedorFormulario.style.display = "block"
     contenedorTexto.style.display = "none"
 }
