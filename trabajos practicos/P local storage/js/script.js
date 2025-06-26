@@ -30,38 +30,38 @@ function guardarColor() {
 }
 
 function agregarTarea() {
-  const input = document.getElementById("tareaInput");
+    const input = document.getElementById("tareaInput");
 
-  if (input.value !== "") {
-    let tareasTexto = localStorage.getItem("tareas");
-    let tareas = [];
+    if (input.value !== "") {
+        let tareasTexto = localStorage.getItem("tareas");
+        let tareas = [];
 
-    if (tareasTexto) {
-      tareas = tareasTexto.split(",");
+        if (tareasTexto) {
+            tareas = tareasTexto.split(",");
+        }
+
+        tareas.push(input.value);
+        localStorage.setItem("tareas", tareas.join(","));
+        input.value = "";
+        mostrarTareas();
     }
-
-    tareas.push(input.value);
-    localStorage.setItem("tareas", tareas.join(","));
-    input.value = "";
-    mostrarTareas();
-  }
 }
 
 function mostrarTareas() {
-  const lista = document.getElementById("listaTareas");
-  lista.innerHTML = "";
+    const lista = document.getElementById("listaTareas");
+    lista.innerHTML = "";
 
-  let tareasTexto = localStorage.getItem("tareas");
+    let tareasTexto = localStorage.getItem("tareas");
 
-  if (tareasTexto) {
-    let tareas = tareasTexto.split(",");
+    if (tareasTexto) {
+        let tareas = tareasTexto.split(",");
 
-    for (let i = 0; i < tareas.length; i++) {
-      const li = document.createElement("li");
-      li.textContent = tareas[i];
-      lista.appendChild(li);
+        for (let i = 0; i < tareas.length; i++) {
+            const li = document.createElement("li");
+            li.textContent = tareas[i];
+            lista.appendChild(li);
+        }
     }
-  }
 }
 
 let segundos = Number(sessionStorage.getItem("tiempo")) || 0;
@@ -82,37 +82,37 @@ function guardarNota() {
 const check = document.getElementById("interruptor");
 check.checked = localStorage.getItem("estado") === "true";
 check.addEventListener("change", () => {
-  localStorage.setItem("estado", check.checked);
+    localStorage.setItem("estado", check.checked);
 });
 
 document.getElementById("bienvenida").innerText = localStorage.getItem("mensajeBienvenida") || "";
 function guardarMensaje() {
-  const mensaje = document.getElementById("mensaje").value;
-  localStorage.setItem("mensajeBienvenida", mensaje);
-  document.getElementById("bienvenida").innerText = mensaje;
+    const mensaje = document.getElementById("mensaje").value;
+    localStorage.setItem("mensajeBienvenida", mensaje);
+    document.getElementById("bienvenida").innerText = mensaje;
 }
 
 let compras = JSON.parse(localStorage.getItem("compras")) || [];
 function mostrarCompras() {
-  document.getElementById("listaCompras").innerHTML = "";
-  compras.forEach(c => {
-    document.getElementById("listaCompras").innerHTML += `<li>${c}</li>`;
-  });
+    document.getElementById("listaCompras").innerHTML = "";
+    compras.forEach(c => {
+        document.getElementById("listaCompras").innerHTML += `<li>${c}</li>`;
+    });
 }
 function agregarCompra() {
-  const item = document.getElementById("compra").value;
-  compras.push(item);
-  localStorage.setItem("compras", JSON.stringify(compras));
-  mostrarCompras();
+    const item = document.getElementById("compra").value;
+    compras.push(item);
+    localStorage.setItem("compras", JSON.stringify(compras));
+    mostrarCompras();
 }
 mostrarCompras();
 
 const ahora = new Date().toLocaleString();
 const ultima = localStorage.getItem("ultimaVisita");
 if (ultima) {
-  document.getElementById("ultimaVisita").innerText = "Última visita: " + ultima;
+    document.getElementById("ultimaVisita").innerText = "Última visita: " + ultima;
 } else {
-  document.getElementById("ultimaVisita").innerText = "¡Bienvenido!";
+    document.getElementById("ultimaVisita").innerText = "¡Bienvenido!";
 }
 localStorage.setItem("ultimaVisita", ahora);
 
@@ -121,9 +121,9 @@ var mostrar = document.getElementById("mostrarProgreso");
 var valorGuardado = localStorage.getItem("progreso");
 if (valorGuardado) {
     barra.value = valorGuardado;
-    } else {
+} else {
     barra.value = 0;
-    }
+}
 mostrar.innerText = barra.value;
 function guardarProgreso() {
     var valor = barra.value;
@@ -134,41 +134,41 @@ function guardarProgreso() {
 document.getElementById("nombreForm").value = localStorage.getItem("nombreForm") || "";
 document.getElementById("emailForm").value = localStorage.getItem("emailForm") || "";
 function guardarFormulario() {
-  localStorage.setItem("nombreForm", document.getElementById("nombreForm").value);
-  localStorage.setItem("emailForm", document.getElementById("emailForm").value);
+    localStorage.setItem("nombreForm", document.getElementById("nombreForm").value);
+    localStorage.setItem("emailForm", document.getElementById("emailForm").value);
 }
 
 let puntaje = Number(localStorage.getItem("puntaje")) || 0;
 document.getElementById("puntaje").innerText = puntaje;
 function sumarPuntaje() {
-  puntaje++;
-  localStorage.setItem("puntaje", puntaje);
-  document.getElementById("puntaje").innerText = puntaje;
+    puntaje++;
+    localStorage.setItem("puntaje", puntaje);
+    document.getElementById("puntaje").innerText = puntaje;
 }
 
 let historial = JSON.parse(localStorage.getItem("historial")) || [];
 historial.push(location.href);
 localStorage.setItem("historial", JSON.stringify(historial));
 historial.forEach(pagina => {
-  document.getElementById("historial").innerHTML += `<li>${pagina}</li>`;
+    document.getElementById("historial").innerHTML += `<li>${pagina}</li>`;
 });
 
 
 const temaGuardado = localStorage.getItem("tema");
 if (temaGuardado === "oscuro") {
-  document.body.classList.add("oscuro");
+    document.body.classList.add("oscuro");
 } else {
-  document.body.classList.add("claro");
+    document.body.classList.add("claro");
 }
 
 function cambiarTema() {
-  if (document.body.classList.contains("claro")) {
-    document.body.classList.remove("claro");
-    document.body.classList.add("oscuro");
-    localStorage.setItem("tema", "oscuro");
-  } else {
-    document.body.classList.remove("oscuro");
-    document.body.classList.add("claro");
-    localStorage.setItem("tema", "claro");
-  }
+    if (document.body.classList.contains("claro")) {
+        document.body.classList.remove("claro");
+        document.body.classList.add("oscuro");
+        localStorage.setItem("tema", "oscuro");
+    } else {
+        document.body.classList.remove("oscuro");
+        document.body.classList.add("claro");
+        localStorage.setItem("tema", "claro");
+    }
 }
